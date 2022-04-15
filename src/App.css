@@ -1,0 +1,129 @@
+/*********** Navigation Bar ***********/
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+
+}
+
+.links {
+  color: black;
+  background-color: '#FFD124';
+  border-radius: 10px;
+  margin-left: auto;
+}
+
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+
+.navbar a:hover {
+  color: #4F98CA;
+}
+
+.navbar img {
+  max-width: 140px;
+}
+
+
+
+/*********** Main ***********/
+.main-pic {
+  background-image: url('./assets/Security-Gates.jpg');
+  object-fit: cover;
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 100px;
+  overflow: visible;
+  position: relative;
+  font-family: 'Open Sans',sans-serif;
+  
+}
+
+.main-pic h1 {
+  font-size: 60px;
+  margin: 0;
+  margin-left: 30px;
+  font-weight: normal;
+  font-family: Montserrat, sans-serif !important;
+  line-height: 1.1;
+  color: #ffffff !important;
+}
+
+.main-pic h2 {
+  font-size: 40px;
+  margin: 0;
+  margin-left: 30px;
+  font-weight: normal;
+  font-family: Montserrat, sans-serif !important;
+  line-height: 1.1;
+  color: #ffffff !important;
+}
+
+/*********** Form ***********/
+.div-forms {
+  background-image: url('./assets/Security-Gates-shade.jpg');
+  object-fit: cover;
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 100px;
+  justify-content:center;
+  text-align: center;
+  
+}
+
+form {    
+  padding: 80px 70px;
+}
+
+form label {
+  font-weight: bold;
+  color: #ffffff;
+  font-size: large;
+}
+
+form button {
+  text-transform: uppercase;
+  background-color: #8db8e0;
+  font-size: large;
+  padding: 5px 15px 5px 15px;
+  cursor: pointer;
+  border: 0 none transparent;
+  border-radius: 0;
+}
+
+form button:hover {
+  text-decoration: none;
+  outline-width: 0;
+  background-color: #afcde9;
+}
+
+
+/*********** Footer ***********/
+footer {
+  /* position: relative;
+  display:flex; */
+  padding: 20px;
+  /* margin-top: 50px; */
+  background-color: #272727;
+  /* border-top: 1px solid white; */
+  justify-content:center;
+  text-align: center;
+ 
+}
+
+footer img {
+  max-width: 140px;
+  
+}
+
+footer p {
+  color: #EFFFFB;
+  
+}
