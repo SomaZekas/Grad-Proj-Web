@@ -8,8 +8,8 @@ const PublicNavbar = () => {
       <div className='links'>
         <Link to='/'>Home</Link>
         <Link to='/sign-in'>Sign In</Link>
-        <Link to='/about'>About Us</Link>
-        <Link to='/contact'>Contact Us</Link>
+        <Link to='/About'>About Us</Link>
+        <Link to='/Contact'>Contact Us</Link>
       </div>
     </nav>
   );

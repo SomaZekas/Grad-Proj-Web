@@ -29,7 +29,7 @@ const Login = (props) => {
             <input type='email' placeholder='user@example.com' onChange={(e) => setEmail(e.target.value)} /> <br/>
 
             <label>Password: </label><br/>
-            <input type='password' onChange={(e) => setPassword(e.target.value)} /> <br/><br/>
+            <input type='password' placeholder='password' onChange={(e) => setPassword(e.target.value)} /> <br/><br/>
 
             <button type='button' onClick={(e) => handleSubmit(e)}>Sign In</button>
 

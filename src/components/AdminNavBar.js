@@ -16,7 +16,7 @@ const AdminNavbar = (props) => {
         Welcome, {Authentication.getData().name}.
         <Link to='/'>Home</Link>
         <Link to='/logs'>Logs</Link>
-        <Link to='/test-admin'>Devices</Link>
+        <Link to='/devices'>Devices</Link>
         <Link to='/sign-up'>Sign Up</Link>
         <Link to='/' onClick={handleLogout}>Logout</Link>
       </div>

@@ -89,7 +89,7 @@ const Signup = () => {
                         <input type="email" placeholder='user@example.com' required onChange={(e) => { setEmail(e.target.value) }} /><br />
                         
                         <label>Password:</label><br />
-                        <input type="password" required onChange={(e) => { setPassword(e.target.value) }} /><br />
+                        <input type="password" placeholder='password' required onChange={(e) => { setPassword(e.target.value) }} /><br />
     
                         <label>Nationality:</label><br/>
                         <input type="text" placeholder='Egyptian' required onChange={(e) => { setNationality(e.target.value) }}/><br/>

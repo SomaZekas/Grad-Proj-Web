@@ -9,7 +9,10 @@ import Authentication from './components/Authentication';
 import Logs from './pages/Logs';
 import Signup from './pages/Sign-Up';
 import Home from './pages/Home';
+import Contact from './pages/Contact';
+import About from './pages/About';
 import GatePictures from './components/GatePictures';
+import Devices from './pages/Devices';
 
 export default class App extends Component {
 
@@ -40,9 +43,16 @@ export default class App extends Component {
             <Routes>
               <Route path='/' element={<Home/>}/>
               <Route path='/sign-in' element={<Login setRole={this.setRole}/>}/>
+
+              <Route path='/About' element={<About/> }/>
+              <Route path='/Contact' element ={<Contact/>} /> 
+
               <Route path='/sign-up' element={<Signup/>}/>
               <Route path='/logs' element={<Logs/>}/>
               <Route path='/gate/pictures' element={<GatePictures/>}/>
+
+              <Route path='/devices' element={<Devices/>}/>
+              
             </Routes>
           </Router>
         </header>
