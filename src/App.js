@@ -23,8 +23,11 @@ export default class App extends Component {
       role: role
     });
   };
+
   
   render() {
+    document.title = 'Automated Secure Gate';
+
     const RenderNavbar = () => {
       if (this.state.role === 'admin' || (Authentication.getData() && Authentication.getData().role === 'admin')) {
         return <AdminNavbar setRole={this.setRole}/>

@@ -6,16 +6,18 @@ import Authentication from '../components/Authentication.js';
 
 
 const Signup = () => {
-    const [select, setSelect] = useState('Owner');
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [nationality , setNationality]= useState('');
-    const [nationalityID , setNationalityID]= useState('');
-    const [gender , setGender]= useState('male');
-    const [religion , setReligion]= useState('');
+    const [nationality, setNationality]= useState('');
+    const [nationalityID, setNationalityID]= useState('');
+    const [gender, setGender]= useState('male');
+    const [religion, setReligion]= useState('');
     const [phone, setPhone]= useState('');
-    const [address , setAddress]= useState('');
+    const [address, setAddress]= useState('');
+    const [jobTitle, setJobTitle] = useState('');
+
+    let select = 'Owner';
 
     const handleSubmit = (e) => {
         fetch('/add-person', {
@@ -34,6 +36,7 @@ const Signup = () => {
             address: address,
             email: email,
             password: password,
+            job_title: jobTitle,
             
         })
         }).then((response) => response.json()).then(json => {
@@ -48,21 +51,21 @@ const Signup = () => {
             console.error(error);
             alert('Something\'s Wrong\nPlease check your internet connection.');
         });
-
+        
         e.preventDefault();
     }
     
-
     const RenderSelect = () => {
         if (Authentication.getData().role === 'admin') {
             return (
                 <>
                     <label>Add a: </label>
-                    <select onChange={(e) => { setSelect(e.target.value) }}>
+                    <select onChange={(e) => { select = e.target.value }}>
                         <option value="Owner">Owner</option>
                         <option value="Employee">Employee</option>
                         <option value="Admin">Admin</option>
                     </select>
+                    
                     <br/><br/>
                 </>
             );
@@ -70,6 +73,7 @@ const Signup = () => {
             return <Outlet />;
         }
     }
+
 
     if (Authentication.getData() && (Authentication.getData().role === 'admin' || Authentication.getData().role === 'sales')) {
 
@@ -81,6 +85,7 @@ const Signup = () => {
                         <h1>Sign Up</h1>
     
                         <RenderSelect/>
+
                         
                         <label>Full Name:</label><br/>
                         <input type="text" placeholder='John Smith' required onChange={(e) => { setName(e.target.value) }}/><br/>
@@ -90,7 +95,10 @@ const Signup = () => {
                         
                         <label>Password:</label><br />
                         <input type="password" placeholder='password' required onChange={(e) => { setPassword(e.target.value) }} /><br />
-    
+                        
+                        <label>Job Title:</label><br/>
+                        <input type="text" placeholder='Engineer' required onChange={(e) => { setJobTitle(e.target.value) }}/><br/>
+
                         <label>Nationality:</label><br/>
                         <input type="text" placeholder='Egyptian' required onChange={(e) => { setNationality(e.target.value) }}/><br/>
     

@@ -239,3 +239,12 @@ a{
 {
   color: white;
 }
+
+/* Gate Pictures Log */
+.pictures-log img {
+  width: 25%;
+  height: 25%;
+  padding: 15px;
+  /* display: block;
+  margin-left: auto; */
+}

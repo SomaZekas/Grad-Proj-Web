@@ -17,16 +17,19 @@ const GatePictures = () => {
 
     return (
         <>
-            <h1>GatePictures</h1>
+        
+            <h1 style={{padding: 15}}>GatePictures:</h1>
             {data.map((key, idx) => {
                 return (
-                    <>
-                        <img src={key.entrance_img.url} alt='gate'/>
-                        <h3>File Name: {key.entrance_img.filename}</h3>
-                        <h3>Date Uploaded: {key.entrance_img.dateUploaded}</h3>
+                    <div className='pictures-log'>
+                        <a href={key.entrance_img.url} target='_blank'>
+                            <img src={key.entrance_img.url} alt='gate' />
+                        </a>
+                        <h3>File Name: <h4 style={{fontWeight: 'normal'}}>{key.entrance_img.filename}</h4></h3>
+                        <h3>Date Uploaded: <h4 style={{fontWeight: 'normal'}}>{key.entrance_img.dateUploaded}</h4></h3>
                         <hr/>
 
-                    </>
+                    </div>
                 )
 
             })}

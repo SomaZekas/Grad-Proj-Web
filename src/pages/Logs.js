@@ -18,6 +18,7 @@ const Logs = () => {
                 <li><a href='/logs/server' target={'_blank'}>server logs</a></li>
                 <li><Link to='/gate/pictures'>Gate Pictures</Link></li>
             </ul>
+            
             </div>
         );
     } else {
