@@ -15,7 +15,7 @@ const EmployeeNavbar = (props) => {
         <div className='links'>
           Welcome, {Authentication.getData().name}.
           <Link to='/'>Home</Link>
-          <Link to='/sign-up'>Sign Up</Link>
+          <Link to='/sign-up'>Add an owner</Link>
           <Link to='/' onClick={handleLogout}>Logout</Link>
       </div>
     </nav>

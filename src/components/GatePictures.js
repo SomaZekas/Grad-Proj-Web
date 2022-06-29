@@ -7,7 +7,7 @@ const GatePictures = () => {
     useEffect(() => {
         fetch('/logs/gate-pictures').then((response) => response.json()).then(json => {
             setData(json.data);
-            console.log(json);
+            //console.log(json);
 
         }).catch(err => {
             console.error(err);
@@ -25,8 +25,18 @@ const GatePictures = () => {
                         <a href={key.entrance_img.url} target='_blank'>
                             <img src={key.entrance_img.url} alt='gate' />
                         </a>
-                        <h3>File Name: <h4 style={{fontWeight: 'normal'}}>{key.entrance_img.filename}</h4></h3>
-                        <h3>Date Uploaded: <h4 style={{fontWeight: 'normal'}}>{key.entrance_img.dateUploaded}</h4></h3>
+
+                        <p style={{fontSize: '1.2rem', padding: '2px 20px'}}><b>Guest Name: </b>{key.name.charAt(0).toUpperCase() + key.name.slice(1)}</p>
+                        <p style={{fontSize: '1.2rem', padding: '2px 20px'}}><b>Guest's Car Numbers: </b>{key.car_id}</p>
+                        <p style={{fontSize: '1.2rem', padding: '2px 20px'}}><b>Guest's ID: </b>ObjectId('{key._id}')</p>
+                        
+                        <p style={{fontSize: '1.2rem', padding: '2px 20px'}}><b>Owner's Name: </b>{key.owner_name.charAt(0).toUpperCase() + key.owner_name.slice(1)}</p>
+                        <p style={{fontSize: '1.2rem', padding: '2px 20px'}}><b>Owner's Address: </b>{key.owner_address}</p>
+                        <p style={{fontSize: '1.2rem', padding: '2px 20px'}}><b>Owner's ID: </b>ObjectId('{key.owner_id}')</p>
+                        
+                        <p style={{fontSize: '1.2rem', padding: '2px 20px'}}><b>File Name: </b>{key.entrance_img.filename}</p>
+                        <p style={{fontSize: '1.2rem', padding: '2px 20px'}}><b>Date Uploaded: </b>{key.entrance_img.dateUploaded}</p>
+
                         <hr/>
 
                     </div>

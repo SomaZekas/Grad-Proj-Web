@@ -17,7 +17,7 @@ const AdminNavbar = (props) => {
         <Link to='/'>Home</Link>
         <Link to='/logs'>Logs</Link>
         <Link to='/devices'>Devices</Link>
-        <Link to='/sign-up'>Sign Up</Link>
+        <Link to='/sign-up'>Add a Person</Link>
         <Link to='/' onClick={handleLogout}>Logout</Link>
       </div>
     </nav>
